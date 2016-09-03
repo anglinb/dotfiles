@@ -17,7 +17,7 @@ computers a few times recently. This is very WIP, try at your own risk.
     it was...)
     osx/ (OSX specific install)
         install.sh        (Sets a bunch of parameters specific to mac osx)
-   tools/ (Build dir for tools)
+    tools/ (Build dir for tools)
         install.sh        (Build all to tools & link them to bin)
         link.py           (Could do this with shell script. Links files)
         links.txt         (What binaries to link)
