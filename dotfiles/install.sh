@@ -2,6 +2,7 @@
 
 import os
 import shutil
+import errno
 
 BLACK_LIST = set([
    'install.sh',
