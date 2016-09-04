@@ -25,7 +25,9 @@ if [ -z "$PLATFORM" ]; then
 	exit 1
 fi
 
+# Commands that I don't know where to put yet...
 mkdir -p bin
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 if [ "$PLATFORM" == "osx" ]; then
 	# Install osx tweaks (and homebrew)
@@ -40,3 +42,6 @@ cd ..
 # Install dotfiles directory
 cd dotfiles && ./install.sh
 cd ..
+
+# Finish setup
+vim +PluginInstall +qall
