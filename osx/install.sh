@@ -16,6 +16,7 @@ brew install postgres
 brew cask install --appdir="/Applications" macvim
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" skitch
 
 # Must have non-dev
 brew cask install --appdir="/Applications" spotify
