@@ -23,3 +23,7 @@ computers a few times recently. This is very WIP, try at your own risk.
         links.txt         (What binaries to link)
         requirements.txt  (Python libs I want gobally like mitmproxyy)
 
+
+##Todo
+
+[] Setup auto-reverse ssh tunnel to bastion (http://blog.kylemanna.com/osx/2013/06/20/ssh-reverse-tunnel-on-mac-os-x/)
