@@ -28,3 +28,4 @@ computers a few times recently. This is very WIP, try at your own risk.
 
 [] Setup auto-reverse ssh tunnel to bastion (http://blog.kylemanna.com/osx/2013/06/20/ssh-reverse-tunnel-on-mac-os-x/)
 [] Add ProxyCommand to ssh.md
+[] Setup complete Ctrl-(hjkl) movement for splits & tmux windows

@@ -11,6 +11,8 @@ brew upgrade --all
 # Tools
 brew install tmux
 brew install postgres
+brew install node
+brew install watchman
 
 # Core functionality Apps
 brew cask install --appdir="/Applications" macvim

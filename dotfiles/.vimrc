@@ -13,12 +13,26 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'christoomey/vim-tmux-navigator'
+
+" Python
+Plugin 'davidhalter/jedi-vim'
+Plugin 'Valloric/YouCompleteMe'
+
+" React native packages
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()            " required
 
 filetype plugin indent on    " required
 filetype plugin on           " not sure if I need this
 syntax on
+
+" Plugin Specific Things
+" -----------------------------------------------------------------
+let g:jsx_ext_required = 0
+
 
 " General
 " -----------------------------------------------------------------

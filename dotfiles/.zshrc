@@ -63,11 +63,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+else
+   export EDITOR='mvim -v'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -87,7 +87,11 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias st="git status"
 alias act="source env/bin/activate"
+alias virt="virtualenv env"
 alias dc="eval \$(docker-machine env)"
+alias vim="mvim -v"
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # Go Bindings
 export GOPATH="/Users/brian/Files/go"
@@ -95,6 +99,8 @@ export GOPATH="/Users/brian/Files/go"
 # Path Additions
 export PATH="$PATH:$GOPATH/bin:$HOME/dotfiles/bin"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+export PATH="$PATH:$HOME/Library/Android/android-ndk-r12b"
 
 # Vim Bindings
 bindkey -v
