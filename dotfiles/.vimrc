@@ -15,9 +15,16 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-tmux-navigator'
 
+
+" Command Running
+Plugin 'benmills/vimux'
+Plugin 'tpope/vim-dispatch'
+
 " Python
 Plugin 'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'christoomey/vim-tmux-runner'
 
 " React native packages
 Plugin 'pangloss/vim-javascript'
@@ -55,7 +62,7 @@ map <Leader>w :w<CR>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
+"command W w !sudo tee % > /dev/null
 
 " Interface
 " -----------------------------------------------------------------
@@ -108,7 +115,12 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-set hlsearch
+" set hlsearch
+set nohlsearch
+
+" Clear highlighting on escape in normal mode
+" nnoremap <esc> :noh<return><esc>
+" nnoremap <esc>^[ <esc>^[
 
 " Makes search act like search in modern browsers
 set incsearch
@@ -293,4 +305,28 @@ set laststatus=2
 " Stopped at line 307 of ~/.vim_go_runtime/vimrc/basic.vim
 
 
+"------------------------------------------------------------------------------
+" Vimux
+"------------------------------------------------------------------------------
+" Run last commad
 
+map <Leader>r :VimuxRunLastCommand<CR>
+
+"------------------------------------------------------------------------------
+" Autopep8
+"------------------------------------------------------------------------------
+
+map <Leader>f :Autopep8<CR>
+let g:autopep8_disable_show_diff=1
+let g:autopep8_max_line_length=120
+
+"------------------------------------------------------------------------------
+" Command Runner
+"------------------------------------------------------------------------------
+function SaveAndRun()
+    :w
+    :VtrSendCommandToRunner
+endfunction
+
+nmap <Leader>a :call SaveAndRun()<CR>
+nmap <Leader>e :VtrFlushCommand<CR>
