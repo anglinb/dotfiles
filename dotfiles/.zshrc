@@ -93,6 +93,9 @@ alias vim="mvim -v"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
+# Pyenv
+eval "$(pyenv init -)"
+
 # Go Bindings
 export GOPATH="/Users/brian/Files/go"
 
