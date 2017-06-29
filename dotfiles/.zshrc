@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/brian/.oh-my-zsh
+export ZSH=/usr/local/Cellar/zsh/5.2
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -85,7 +85,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
-alias st="git status"
+alias st="git status ."
 alias act="source env/bin/activate"
 alias virt="virtualenv env"
 alias dc="eval \$(docker-machine env)"
@@ -94,10 +94,12 @@ alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Go Bindings
-export GOPATH="/Users/brian/Files/go"
+export GOPATH="/Users/brian/Files/endavors/go"
 
 # Path Additions
 export PATH="$PATH:$GOPATH/bin:$HOME/dotfiles/bin"
