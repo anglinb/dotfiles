@@ -167,6 +167,13 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" Setup wrapping for Markdown
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+augroup WrapLineInMarkdownFile
+    autocmd!
+    autocmd FileType markdown setlocal wrap
+augroup END
+
 "------------------------------------------------------------------------------
 " Files, backups and undo
 "------------------------------------------------------------------------------
@@ -205,8 +212,10 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
+au FileType python setl sw=2 sts=2 et
+au FileType ruby setl sw=2 sts=2 et
 
 " Round indent to multiple of 'shiftwidth' for > and < commands
 set shiftround
