@@ -13,6 +13,9 @@ brew install tmux
 brew install postgres
 brew install node
 brew install watchman
+brew install terraform
+brew install awscli
+
 
 # Core functionality Apps
 brew cask install --appdir="/Applications" macvim
