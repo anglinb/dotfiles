@@ -12,16 +12,23 @@ brew upgrade --all
 brew install tmux
 brew install postgres
 brew install node
+brew install nodenv
+brew install rbenv
 brew install watchman
 brew install terraform
 brew install awscli
 
+brew install pyenv-virtualenv
+
+# Security
+brew install gpg2
 
 # Core functionality Apps
 brew cask install --appdir="/Applications" macvim
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" skitch
+brew cask install --appdir="/Applications" hammerspoon
 
 # Must have non-dev
 brew cask install --appdir="/Applications" spotify
@@ -66,5 +73,4 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 #Show the ~/Library folder
 chflags nohidden ~/Library
-
 

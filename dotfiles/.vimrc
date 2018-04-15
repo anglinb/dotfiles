@@ -21,7 +21,7 @@ Plugin 'benmills/vimux'
 Plugin 'tpope/vim-dispatch'
 
 " Python
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'christoomey/vim-tmux-runner'

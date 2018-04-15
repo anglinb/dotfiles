@@ -110,6 +110,7 @@ alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Go Bindings
 export GOPATH="/Users/brian/Files/endavors/go"
@@ -119,6 +120,7 @@ export PATH="$PATH:$GOPATH/bin:$HOME/dotfiles/bin"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/Library/Android/android-ndk-r12b"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Vim Bindings
 bindkey -v
@@ -147,4 +149,17 @@ eval "$(rbenv init -)"
 it2prof() { echo -e "\033]50;SetProfile=$1\a" }
 
 export PATH="/usr/local/sbin:$PATH"
-eval "$(nodenv init -)"
+export PATH="~/.local/bin;$PATH"
+export PATH=$(brew --prefix openvpn)/sbin:$PATH
+export PATH="$HOME/.npm-packages/bin:$PATH"
+#export PATH="$HOME/dotfiles/node8.1.4/bin:$PATH"
+
+# added by travis gem
+[ -f /Users/brian/.travis/travis.sh ] && source /Users/brian/.travis/travis.sh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh

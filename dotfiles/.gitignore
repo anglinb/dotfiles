@@ -1,3 +1,4 @@
 .installed
 .backup
 instance/
+.env*
