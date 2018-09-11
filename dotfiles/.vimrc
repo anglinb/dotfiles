@@ -26,6 +26,10 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'christoomey/vim-tmux-runner'
 
+
+" Language Specific
+Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " React native packages
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'

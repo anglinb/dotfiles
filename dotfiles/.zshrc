@@ -121,6 +121,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/Library/Android/android-ndk-r12b"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # Vim Bindings
 bindkey -v
@@ -163,3 +164,9 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+
+
+# EOS
+alias cleos='docker exec eosio /opt/eosio/bin/cleos --wallet-url http://localhost:8888'
+alias eosiocpp='docker exec eosio eosiocpp'
