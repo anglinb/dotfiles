@@ -1,2 +1,2 @@
-mitmproxy==0.17
+mitmproxy==4.0.4
 
