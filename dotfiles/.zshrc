@@ -98,6 +98,7 @@ fi
 
 
 # Aliases
+alias brr="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias st="git status ."
 alias act="source env/bin/activate"
 alias virt="virtualenv env"
@@ -170,3 +171,9 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 # EOS
 alias cleos='docker exec eosio /opt/eosio/bin/cleos --wallet-url http://localhost:8888'
 alias eosiocpp='docker exec eosio eosiocpp'
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/Users/brian/moonlight/chrome/depot_tools:$PATH"
+
+# Wasmer
+export WASMER_DIR="/Users/brian/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"

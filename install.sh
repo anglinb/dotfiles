@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -e
+
+cd "$(dirname "$0")/.."
+
 # Catch the sudo exception
 if (($EUID != 0)); then
   if [[ -t 1 ]]; then

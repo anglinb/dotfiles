@@ -17,7 +17,6 @@ brew install rbenv
 brew install watchman
 brew install terraform
 brew install awscli
-
 brew install pyenv-virtualenv
 
 # Security
@@ -29,6 +28,7 @@ brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" skitch
 brew cask install --appdir="/Applications" hammerspoon
+brew cask install --appdir="/Applications" graphiql
 
 # Must have non-dev
 brew cask install --appdir="/Applications" spotify
@@ -74,3 +74,8 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 #Show the ~/Library folder
 chflags nohidden ~/Library
 
+
+git clone https://github.com/jasonrudolph/keyboard.git ~/.keyboard
+
+cd ~/.keyboard
+script/setup
