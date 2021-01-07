@@ -4,6 +4,7 @@ tap "homebrew/cask"
 brew "tmux"
 cask  "iterm2", args: { appdir: "/Applications"}
 brew "zsh"
+brew "reattach-to-user-namespace"
 
 # Databases
 brew "postgres"
