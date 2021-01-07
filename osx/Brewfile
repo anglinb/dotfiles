@@ -1,6 +1,9 @@
 tap "homebrew/cask"
 
+# Terminal
 brew "tmux"
+cask  "iterm2", args: { appdir: "/Applications"}
+brew "zsh"
 
 # Databases
 brew "postgres"
@@ -17,12 +20,10 @@ brew "terraform"
 brew "awscli"
 brew "pyenv-virtualenv"
 brew "gpg2"
-brew "zsh"
 
 
 # Devtools
 cask  "macvim", args: { appdir: "/Applications"}
-cask  "iterm2", args: { appdir: "/Applications"}
 cask  "virtualbox", args: { appdir: "/Applications"}
 cask  "graphiql", args: { appdir: "/Applications"}
 
