@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This command creates an ssh tunnel to the target machine, then opens a vnc
+# connection.
+
+set -e
+
+echo "Creating tunnel to: ${1}"
+
+# Spawn another process to wait for tunnel, then open browser
+( sleep 2 && open vnc://127.0.0.1:5901  &)
+ssh -N  -L 5901:localhost:5900 ${1}
