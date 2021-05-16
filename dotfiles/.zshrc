@@ -5,9 +5,6 @@
 # Fix this:
 export ZSH="$HOME/.oh-my-zsh"
 
-export ZSH=/usr/local/Cellar/zsh/5.2
-
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -177,3 +174,4 @@ export PATH="/Users/brian/moonlight/chrome/depot_tools:$PATH"
 # Wasmer
 export WASMER_DIR="/Users/brian/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+alias my-ip='~/.dotfiles/script/ip'

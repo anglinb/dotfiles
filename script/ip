@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'socket'
+print Socket.ip_address_list.detect{|intf| intf.ipv4_private?}.ip_address
+$stdout.flush
