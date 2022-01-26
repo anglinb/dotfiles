@@ -7,6 +7,9 @@ cd "$(dirname "$0")"
 # Install homebrew
 ./install_homebrew.sh
 
+# Make sure we always eval homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 brew update
 brew upgrade --all
 

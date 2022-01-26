@@ -14,22 +14,22 @@ brew "node"
 brew "nodenv"
 brew "rbenv"
 brew "watchman"
+brew "pyenv-virtualenv"
 
 # ClI
 brew "mitmproxy"
 brew "terraform"
 brew "awscli"
-brew "pyenv-virtualenv"
+brew "aws-iam-authenticator"
 brew "gpg2"
 
+# Kube
+cask "lens", args: { appdir: "/Applications" }
 
 # Devtools
 cask  "macvim", args: { appdir: "/Applications"}
 cask  "virtualbox", args: { appdir: "/Applications"}
 cask  "graphiql", args: { appdir: "/Applications"}
-
-# Workflow
-cask  "skitch", args: { appdir: "/Applications"}
 
 # Knowledge/Communications
 cask  "slack", args: { appdir: "/Applications"}
