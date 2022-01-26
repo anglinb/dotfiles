@@ -5,7 +5,7 @@ set -e
 cd "$(dirname "$0")"
 
 # Install homebrew
-./install_homebrew
+./install_homebrew.sh
 
 brew update
 brew upgrade --all
