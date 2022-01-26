@@ -28,7 +28,7 @@ cask "lens", args: { appdir: "/Applications" }
 
 # Devtools
 cask  "macvim", args: { appdir: "/Applications"}
-cask  "virtualbox", args: { appdir: "/Applications"}
+# cask  "virtualbox", args: { appdir: "/Applications"}
 cask  "graphiql", args: { appdir: "/Applications"}
 
 # Knowledge/Communications
@@ -38,4 +38,8 @@ cask  "notion", args: { appdir: "/Applications"}
 # Misc
 cask "spotify", args: { appdir: "/Applications"}
 cask "google-chrome", args: { appdir: "/Applications"}
-cask "istat-menus"
+# cask "istat-menus"
+cask "visual-studio-code", args: { appdir: "/Applications"}
+cask "1password", args: { appdir: "/Applications"}
+
+

@@ -22,7 +22,11 @@ brew cleanup
 ./install_keyboard.sh
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+which -s zsh 2>&1 > /dev/null
+if [ $? -ne 0 ]
+then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+fi
 # Make sure git will cache my password
 git config --global credential.helper osxkeychain
