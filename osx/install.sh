@@ -11,7 +11,7 @@ cd "$(dirname "$0")"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew update
-brew upgrade --all
+brew upgrade
 
 # Install from Brewfile
 brew bundle

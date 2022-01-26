@@ -153,8 +153,6 @@ export PATH=$(brew --prefix openvpn)/sbin:$PATH
 export PATH="$HOME/.npm-packages/bin:$PATH"
 #export PATH="$HOME/dotfiles/node8.1.4/bin:$PATH"
 
-# added by travis gem
-[ -f /Users/brian/.travis/travis.sh ] && source /Users/brian/.travis/travis.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -163,13 +161,7 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
 
-
-
-# EOS
-alias cleos='docker exec eosio /opt/eosio/bin/cleos --wallet-url http://localhost:8888'
-alias eosiocpp='docker exec eosio eosiocpp'
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/Users/brian/moonlight/chrome/depot_tools:$PATH"
+source "$(pwd)/.aliases"
 
 # Wasmer
 export WASMER_DIR="/Users/brian/.wasmer"

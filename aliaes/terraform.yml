@@ -1,0 +1,9 @@
+aliases:
+  - command: 'terraform'
+    alias: 'tf'
+  - command: 'time terraform init'
+    alias: 'tfi'
+  - command: 'time terraform apply'
+    alias: 'tfa'
+  - command: 'time terraform apply -auto-approve'
+    alias: 'tfaa'

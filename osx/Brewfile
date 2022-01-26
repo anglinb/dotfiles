@@ -38,4 +38,4 @@ cask  "notion", args: { appdir: "/Applications"}
 # Misc
 cask "spotify", args: { appdir: "/Applications"}
 cask "google-chrome", args: { appdir: "/Applications"}
-
+cask "istat-menus"
