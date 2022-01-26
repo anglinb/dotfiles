@@ -5,12 +5,12 @@ I finally decided to setup a dotfiles repo, mainly motivated by having to move
 computers a few times recently. This is very WIP, try at your own risk.
 
 
-##Install
+## Install
 
-    git clone https://github.com/anglinb/dotfiles ~/dotfiles &&
-    ~/dotfiles/install.sh
+    git clone https://github.com/anglinb/dotfiles ~/.dotfiles &&
+    ~/.dotfiles/install.sh
 
-##File Structure
+## File Structure
 
     bin/ (Python build & random stuff gets linked here)
     cron/ (I had a cron job here but I accidentally deleted it... No clue what
@@ -24,7 +24,7 @@ computers a few times recently. This is very WIP, try at your own risk.
         requirements.txt  (Python libs I want gobally like mitmproxyy)
 
 
-##Todo
+## Todo
 
 [] Setup auto-reverse ssh tunnel to bastion (http://blog.kylemanna.com/osx/2013/06/20/ssh-reverse-tunnel-on-mac-os-x/)
 [] Add ProxyCommand to ssh.md
