@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -e
+
+cd "$(dirname "$0")"
+
 # Install homebrew
 ./install_homebrew
 
