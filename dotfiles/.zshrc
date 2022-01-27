@@ -93,6 +93,8 @@ else
    export EDITOR='mvim -v'
 fi
 
+# Setup homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Aliases
 alias brr="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
@@ -100,7 +102,7 @@ alias st="git status ."
 alias act="source env/bin/activate"
 alias virt="virtualenv env"
 alias dc="eval \$(docker-machine env)"
-alias vim="mvim -v"
+# alias vim="mvim -v"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
@@ -161,9 +163,17 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/brian/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
 
-source "$(pwd)/.aliases"
+
+# Include ~/.aliases if it exists
+if [ -f $HOME/.aliases ]; then
+    source $HOME/.aliases
+fi
 
 # Wasmer
 export WASMER_DIR="/Users/brian/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 alias my-ip='~/.dotfiles/script/ip'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

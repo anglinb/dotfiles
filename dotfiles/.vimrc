@@ -4,37 +4,39 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+
+call plug#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'gmarik/Vundle.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-tmux-navigator'
 
 
 " Command Running
-Plugin 'benmills/vimux'
-Plugin 'tpope/vim-dispatch'
+Plug 'benmills/vimux'
+Plug 'tpope/vim-dispatch'
 
 " Python
 " Plugin 'davidhalter/jedi-vim'
 " Plugin 'Valloric/YouCompleteMe'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'christoomey/vim-tmux-runner'
+Plug 'tell-k/vim-autopep8'
+Plug 'christoomey/vim-tmux-runner'
 
 
 " Language Specific
-Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " React native packages
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
-call vundle#end()            " required
+
+call plug#end()
 
 filetype plugin indent on    " required
 filetype plugin on           " not sure if I need this

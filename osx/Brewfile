@@ -1,17 +1,24 @@
 tap "homebrew/cask"
+tap "heroku/brew"
+tap "planetscale/tap"
+tap "cloudflare/cloudflare"
 
 # Terminal
 brew "tmux"
 cask  "iterm2", args: { appdir: "/Applications"}
 brew "zsh"
 brew "reattach-to-user-namespace"
+brew "neovim"
+brew "wget"
 
 # Databases
 brew "postgres"
+brew "mysql"
 
 # Languages
 brew "node"
 brew "nodenv"
+brew "yarn"
 brew "rbenv"
 brew "watchman"
 brew "pyenv-virtualenv"
@@ -19,21 +26,27 @@ brew "pyenv-virtualenv"
 # ClI
 brew "mitmproxy"
 brew "terraform"
+brew "heroku"
+brew "gh"
+brew "pscale"
 brew "awscli"
 brew "aws-iam-authenticator"
 brew "gpg2"
+brew "cloudflared"
 
 # Kube
 cask "lens", args: { appdir: "/Applications" }
 
 # Devtools
 cask  "macvim", args: { appdir: "/Applications"}
-# cask  "virtualbox", args: { appdir: "/Applications"}
+cask "docker", args: { appdir: "/Applications"}
 cask  "graphiql", args: { appdir: "/Applications"}
 
 # Knowledge/Communications
 cask  "slack", args: { appdir: "/Applications"}
 cask  "notion", args: { appdir: "/Applications"}
+cask  "zoom", args: { appdir: "/Applications"}
+cask  "tableplus", args: { appdir: "/Applications"}
 
 # Misc
 cask "spotify", args: { appdir: "/Applications"}
@@ -43,3 +56,5 @@ cask "visual-studio-code", args: { appdir: "/Applications"}
 cask "1password", args: { appdir: "/Applications"}
 
 
+# Mac app store
+mas 'Xcode', id: 497_799_835
