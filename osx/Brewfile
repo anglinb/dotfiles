@@ -2,6 +2,7 @@ tap "homebrew/cask"
 tap "heroku/brew"
 tap "planetscale/tap"
 tap "cloudflare/cloudflare"
+tap "superfly/tap"
 
 # Terminal
 brew "tmux"
@@ -27,6 +28,7 @@ brew "pyenv-virtualenv"
 brew "mitmproxy"
 brew "terraform"
 brew "heroku"
+brew "flyctl"
 brew "gh"
 brew "pscale"
 brew "awscli"
@@ -38,15 +40,19 @@ brew "cloudflared"
 cask "lens", args: { appdir: "/Applications" }
 
 # Devtools
-cask  "macvim", args: { appdir: "/Applications"}
+cask "macvim", args: { appdir: "/Applications"}
 cask "docker", args: { appdir: "/Applications"}
-cask  "graphiql", args: { appdir: "/Applications"}
+cask "graphiql", args: { appdir: "/Applications"}
+cask "raycast", args: { appdir: "/Applications" }
+cask "linear-linear", args: { appdir: "/Applications" }
+
 
 # Knowledge/Communications
 cask  "slack", args: { appdir: "/Applications"}
 cask  "notion", args: { appdir: "/Applications"}
 cask  "zoom", args: { appdir: "/Applications"}
 cask  "tableplus", args: { appdir: "/Applications"}
+cask  "paw", args: { appdir: "/Applications"}
 
 # Misc
 cask "spotify", args: { appdir: "/Applications"}
