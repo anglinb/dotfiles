@@ -3,6 +3,7 @@ tap "heroku/brew"
 tap "planetscale/tap"
 tap "cloudflare/cloudflare"
 tap "superfly/tap"
+tap "vectordotdev/brew"
 
 # Terminal
 brew "tmux"
@@ -11,6 +12,7 @@ brew "zsh"
 brew "reattach-to-user-namespace"
 brew "neovim"
 brew "wget"
+brew "vector"
 
 # Databases
 brew "postgres"
@@ -18,6 +20,7 @@ brew "mysql"
 
 # Languages
 brew "node"
+brew "deno"
 brew "nodenv"
 brew "yarn"
 brew "rbenv"
@@ -53,6 +56,8 @@ cask  "notion", args: { appdir: "/Applications"}
 cask  "zoom", args: { appdir: "/Applications"}
 cask  "tableplus", args: { appdir: "/Applications"}
 cask  "paw", args: { appdir: "/Applications"}
+cask  "loom", args: { appdir: "/Applications"}
+
 
 # Misc
 cask "spotify", args: { appdir: "/Applications"}
