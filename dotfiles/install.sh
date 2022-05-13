@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import shutil
@@ -45,12 +45,12 @@ for line in to_unlink:
 
 to_link = filter(lambda x: x.strip() not in BLACK_LIST, os.listdir('.'))
 for line in to_link:
-    print "Linking "+os.path.abspath(line)+"  "+os.path.join(USER_HOME, line)
+    print ("Linking "+os.path.abspath(line)+"  "+os.path.join(USER_HOME, line))
     try:
     	os.symlink(os.path.abspath(line), os.path.join(USER_HOME, line))
     except OSError as e:
         pass
- 
+
 with open('.installed', 'w+') as f:
     f.write('\n'.join(to_link))
 
