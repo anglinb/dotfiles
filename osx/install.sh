@@ -15,7 +15,7 @@ brew upgrade
 brew services
 
 # Install from Brewfile
-brew bundle
+brew bundle || true
 
 # Clean up all the garbage
 brew cleanup
