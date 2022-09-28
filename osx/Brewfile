@@ -70,3 +70,4 @@ cask "1password", args: { appdir: "/Applications"}
 # Mac app store
 mas 'Xcode', id: 497_799_835
 mas 'Paste', id: 967_805_235
+mas 'SimpleNote', id: 692_867_256
