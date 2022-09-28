@@ -7,4 +7,5 @@ if [ ! -d ~/.keyboard ]; then
 fi
 
 cd ~/.keyboard
+git pull
 script/setup

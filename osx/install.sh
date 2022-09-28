@@ -22,12 +22,16 @@ brew cleanup
 
 ./install_keyboard.sh
 
-# Install oh-my-zsh
+# Install zsh
 which -s zsh 2>&1 > /dev/null
 if [ $? -ne 0 ]
 then
+	
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
 # Install nvm
 which -s nvm 2>&1 > /dev/null
