@@ -58,6 +58,7 @@ cask  "tableplus", args: { appdir: "/Applications"}
 cask  "paw", args: { appdir: "/Applications"}
 cask  "loom", args: { appdir: "/Applications"}
 cask  "obsidian", args: { appdir: "/Applications"}
+cask  "cron", args: { appdir: "/Applications"}
 
 # Misc
 cask "spotify", args: { appdir: "/Applications"}
