@@ -40,8 +40,11 @@ then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 fi
 
-
 # Make sure git will cache my password
 git config --global credential.helper osxkeychain
+
+# Setup git author
+git config --global user.email "brianranglin@gmail.com"
+git config --global user.name "Brian Anglin"
 
 ./osx_defaults.sh
