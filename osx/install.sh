@@ -46,5 +46,7 @@ git config --global credential.helper osxkeychain
 # Setup git author
 git config --global user.email "brianranglin@gmail.com"
 git config --global user.name "Brian Anglin"
+git config push.autoSetupRemote true # Make git push work
+
 
 ./osx_defaults.sh

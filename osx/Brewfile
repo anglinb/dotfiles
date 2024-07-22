@@ -46,6 +46,7 @@ cask "docker", args: { appdir: "/Applications"}
 cask "graphiql", args: { appdir: "/Applications"}
 cask "raycast", args: { appdir: "/Applications" }
 cask "linear-linear", args: { appdir: "/Applications" }
+cask "cleanshot", args: { appdir: "/Applications" }
 
 
 # Knowledge/Communications
