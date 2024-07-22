@@ -14,7 +14,7 @@ brew "wget"
 brew "vector"
 
 # Databases
-brew "postgres"
+brew "postgresql@14"
 brew "mysql"
 
 # Languages
@@ -27,7 +27,6 @@ brew "watchman"
 brew "pyenv-virtualenv"
 
 # ClI
-brew "mitmproxy"
 brew "terraform"
 brew "heroku"
 brew "flyctl"
@@ -57,7 +56,7 @@ cask  "tableplus", args: { appdir: "/Applications"}
 cask  "paw", args: { appdir: "/Applications"}
 cask  "loom", args: { appdir: "/Applications"}
 cask  "obsidian", args: { appdir: "/Applications"}
-cask  "cron", args: { appdir: "/Applications"}
+cask  "notion-calendar", args: { appdir: "/Applications"}
 
 # Misc
 cask "spotify", args: { appdir: "/Applications"}
@@ -71,3 +70,4 @@ cask "1password", args: { appdir: "/Applications"}
 mas 'Xcode', id: 497_799_835
 mas 'Paste', id: 967_805_235
 mas 'SimpleNote', id: 692_867_256
+mas 'iStat Menus', id: 1_319_778_037
