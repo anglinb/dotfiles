@@ -39,3 +39,6 @@ chflags nohidden ~/Library
 
 #Autohide dock
 defaults write com.apple.dock autohide -bool true; killall Dock
+
+# Show switcher on all monitors
+defaults write com.apple.Dock appswitcher-all-displays -bool true; killall Dock

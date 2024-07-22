@@ -1,4 +1,3 @@
-tap "homebrew/cask"
 tap "heroku/brew"
 tap "planetscale/tap"
 tap "cloudflare/cloudflare"
