@@ -1266,6 +1266,15 @@
           },
           "full_name": "ngrok"
         }
+      },
+      "bambu-studio": {
+        "version": "01.09.07.52,20240920143753,01.09.07.52",
+        "options": {
+          "args": {
+            "appdir": "/Applications"
+          },
+          "full_name": "bambu-studio"
+        }
       }
     },
     "mas": {
