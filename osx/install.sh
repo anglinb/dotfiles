@@ -17,6 +17,9 @@ brew services
 # Install from Brewfile
 brew bundle || true
 
+# TODO: If we can check if we need this, then we should
+# sudo xcodebuild -license accept
+
 # Clean up all the garbage
 brew cleanup
 
@@ -26,18 +29,23 @@ brew cleanup
 which -s zsh 2>&1 > /dev/null
 if [ $? -ne 0 ]
 then
-	
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+if [ -d "$HOME/.oh-my-zsh" ]; then
+	echo "oh-my-zsh is already installed."
+else
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 # Install nvm
-which -s nvm 2>&1 > /dev/null
-if [ $? -ne 0 ]
+if ! command -v nvm &> /dev/null
 then
+	echo "Installing nvm..."
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+else
+	echo "nvm is already installed."
 fi
 
 # Make sure git will cache my password
