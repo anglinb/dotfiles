@@ -21,6 +21,7 @@ fi
 # Setup some common folders
 
 mkdir -p ~/moonlight  2>&1 > /dev/null
+mkdir -p ~/superwall  2>&1 > /dev/null
 
 # Commands that I don't know where to put yet...
 # mkdir -p bin
