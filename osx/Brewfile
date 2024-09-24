@@ -26,6 +26,7 @@ brew "rbenv"
 brew "watchman"
 brew "pyenv-virtualenv"
 brew "go"
+brew "rust"
 
 # ClI
 brew "terraform"
@@ -49,6 +50,7 @@ cask "raycast", args: { appdir: "/Applications" }
 cask "linear-linear", args: { appdir: "/Applications" }
 cask "cleanshot", args: { appdir: "/Applications" }
 cask "ngrok", args: { appdir: "/Applications" }
+cask "bruno", args: { appdir: "/Applications" }
 
 
 # Knowledge/Communications
