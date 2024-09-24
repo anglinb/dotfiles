@@ -25,6 +25,7 @@ brew "yarn"
 brew "rbenv"
 brew "watchman"
 brew "pyenv-virtualenv"
+brew "go"
 
 # ClI
 brew "terraform"
