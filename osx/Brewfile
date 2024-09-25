@@ -68,6 +68,7 @@ cask "spotify", args: { appdir: "/Applications"}
 cask "google-chrome", args: { appdir: "/Applications"}
 # cask "istat-menus"
 cask "visual-studio-code", args: { appdir: "/Applications"}
+cask "cursor", args: { appdir: "/Applications"}
 cask "1password", args: { appdir: "/Applications"}
 cask "bambu-studio", args: { appdir: "/Applications"}
 
