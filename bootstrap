@@ -32,3 +32,15 @@ else
     echo '    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  # for Linux'
     echo '    eval "$(/opt/homebrew/bin/brew shellenv)"              # for macOS Apple Silicon'
 fi
+
+# Check for ~/.dotfiles
+if [ -d "$HOME/.dotfiles" ]; then
+    echo "✅ ~/.dotfiles already exists."
+else
+    echo "📁 ~/.dotfiles not found. Cloning from GitHub..."
+    git clone https://github.com/anglinb/dotfiles.git "$HOME/.dotfiles" || {
+        echo "❌ Failed to clone dotfiles repo."
+        exit 1
+    }
+    echo "✅ Successfully cloned dotfiles to ~/.dotfiles"
+fi
