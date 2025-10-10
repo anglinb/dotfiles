@@ -23,18 +23,13 @@ fi
 mkdir -p ~/moonlight  2>&1 > /dev/null
 mkdir -p ~/superwall  2>&1 > /dev/null
 
-# Commands that I don't know where to put yet...
-# mkdir -p bin
-# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 if [ "$PLATFORM" == "osx" ]; then
 	# Install osx tweaks (and homebrew)
-	cd osx && ./install.sh
+	cd osx && ./setup
 	cd ..
 fi
 
-cd dotfiles && ./install.sh
+cd dotfiles && ./setup
 cd ..
 
-# Finish setup
-vim +PluginInstall +qall

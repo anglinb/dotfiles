@@ -1,0 +1,45 @@
+# Basics
+cask  "zoom" # Needs sudo so we'll do it first 
+cask "visual-studio-code"
+cask "google-chrome"
+cask "cleanshot"
+brew "gh"
+brew "awscli"
+brew "aws-iam-authenticator"
+
+# Knowledge/Communications
+cask  "ghostty"
+cask  "slack"
+cask  "notion"
+cask  "tableplus"
+cask  "paw"
+cask  "obsidian"
+cask  "notion-calendar"
+mas 'Paste', id: 967_805_235
+mas 'Xcode', id: 497_799_835
+
+# Development
+cask "lens"
+
+# Code
+cask "claude-code"
+brew "tmux"
+brew "reattach-to-user-namespace"
+brew "docker"
+
+# JavaScript / TypeScript
+tap "oven-sh/bun"
+brew "bun"
+brew "fnm"
+
+# Misc
+cask "1password"
+cask "istat-menus"
+cask "bartender"
+
+# App Development
+# mas 'Xcode', id: 497_799_835
+
+
+# Temporary 
+cask "cap"

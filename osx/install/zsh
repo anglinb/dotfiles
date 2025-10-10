@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Install zsh
+which -s zsh 2>&1 > /dev/null
+if [ $? -ne 0 ]
+then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# Install oh-my-zsh
+if [ -d "$HOME/.oh-my-zsh" ]; then
+	echo "oh-my-zsh is already installed."
+else
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi

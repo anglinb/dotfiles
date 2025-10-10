@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 
 # Check for Homebrew
 if command -v brew >/dev/null 2>&1; then
@@ -25,25 +26,5 @@ else
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     elif [ -d "/opt/homebrew/bin" ]; then
         eval "$(/opt/homebrew/bin/brew shellenv)"
-    fi
-
-    echo "✅ Homebrew installation complete!"
-    echo "👉 You may want to add the following to your shell profile:"
-    echo '    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  # for Linux'
-    echo '    eval "$(/opt/homebrew/bin/brew shellenv)"              # for macOS Apple Silicon'
+    fi          # for macOS Apple Silicon'
 fi
-
-# Check for ~/.dotfiles
-if [ -d "$HOME/.dotfiles" ]; then
-    echo "✅ ~/.dotfiles already exists."
-else
-    echo "📁 ~/.dotfiles not found. Cloning from GitHub..."
-    git clone https://github.com/anglinb/dotfiles.git "$HOME/.dotfiles" || {
-        echo "❌ Failed to clone dotfiles repo."
-        exit 1
-    }
-    echo "✅ Successfully cloned dotfiles to ~/.dotfiles"
-fi
-
-cd ~/.dotfiles
-./setup

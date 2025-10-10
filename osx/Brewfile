@@ -6,41 +6,26 @@ tap "vectordotdev/brew"
 
 # Terminal
 brew "tmux"
-cask  "iterm2", args: { appdir: "/Applications"}
-brew "zsh"
+# cask  "iterm2", args: { appdir: "/Applications"}
 brew "reattach-to-user-namespace"
 brew "neovim"
-brew "wget"
-brew "vector"
-
-# Databases
-brew "postgresql@14"
-brew "mysql"
 
 # Languages
-brew "node"
-brew "deno"
-brew "nodenv"
-brew "yarn"
-brew "rbenv"
-brew "watchman"
-brew "pyenv-virtualenv"
+# brew "deno"
+# brew "nodenv"
 brew "go"
 brew "rust"
 
 # ClI
-brew "terraform"
-brew "heroku"
-brew "flyctl"
 brew "gh"
 brew "pscale"
 brew "awscli"
 brew "aws-iam-authenticator"
 brew "gpg2"
-brew "cloudflared"
+# brew "cloudflared"
 
 # Kube
-cask "lens", args: { appdir: "/Applications" }
+# cask "lens", args: { appdir: "/Applications" }
 
 # Devtools
 cask "macvim", args: { appdir: "/Applications"}
@@ -56,10 +41,10 @@ cask "bruno", args: { appdir: "/Applications" }
 # Knowledge/Communications
 cask  "slack", args: { appdir: "/Applications"}
 cask  "notion", args: { appdir: "/Applications"}
-cask  "zoom", args: { appdir: "/Applications"}
-cask  "tableplus", args: { appdir: "/Applications"}
-cask  "paw", args: { appdir: "/Applications"}
-cask  "loom", args: { appdir: "/Applications"}
+# cask  "zoom", args: { appdir: "/Applications"}
+# cask  "tableplus", args: { appdir: "/Applications"}
+# cask  "paw", args: { appdir: "/Applications"}
+# cask  "loom", args: { appdir: "/Applications"}
 cask  "obsidian", args: { appdir: "/Applications"}
 cask  "notion-calendar", args: { appdir: "/Applications"}
 
@@ -68,13 +53,12 @@ cask "spotify", args: { appdir: "/Applications"}
 cask "google-chrome", args: { appdir: "/Applications"}
 # cask "istat-menus"
 cask "visual-studio-code", args: { appdir: "/Applications"}
-cask "cursor", args: { appdir: "/Applications"}
-cask "1password", args: { appdir: "/Applications"}
 cask "bambu-studio", args: { appdir: "/Applications"}
 
+cask "1password", args: { appdir: "/Applications"}
 
 # Mac app store
-mas 'Xcode', id: 497_799_835
-mas 'Paste', id: 967_805_235
-mas 'SimpleNote', id: 692_867_256
-mas 'iStat Menus', id: 1_319_778_037
+# mas 'Xcode', id: 497_799_835
+# mas 'Paste', id: 967_805_235
+# mas 'SimpleNote', id: 692_867_256
+# mas 'iStat Menus', id: 1_319_778_037

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -e
+
+cd "$(dirname "$0")"
+
+./install/homebrew
+
+brew update
+brew upgrade
+brew services
+
+# Install from Brewfile
+brew bundle || true
+
+# Clean up all the garbage
+brew cleanup
+
+./install/keyboard
+
+# Make sure git will cache my password
+git config --global credential.helper osxkeychain
+
+# Setup git author
+git config --global user.email "brianranglin@gmail.com"
+git config --global user.name "Brian Anglin"
+git config push.autoSetupRemote true # Make git push work
+
+
+./osx_defaults.sh

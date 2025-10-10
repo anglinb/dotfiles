@@ -1,3 +1,0 @@
-aliases:
-  - command: arch -x86_64  cloudflared
-    alias: cloudflared

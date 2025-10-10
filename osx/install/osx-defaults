@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 echo "Tweaking Apple Settings"
 
@@ -29,9 +29,11 @@ defaults write NSGlobalDomain KeyRepeat -int 0.1
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 #Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# 2025-10-10 16:03:48.469 defaults[23870:274747] 
+# Could not write domain /Users/brian/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari; exiting
+# defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
-#Add a context menu item for showing the Web Inspector in web views
+# Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 #Show the ~/Library folder
