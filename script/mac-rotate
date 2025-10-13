@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Script to rotate MAC address on macOS
+# This changes the MAC address of the Wi-Fi interface to a random address
+
+sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | sed 's/^\(..\)/0e/')
+
+# set -e
+
+# # Check if running as root
+# if [ "$EUID" -ne 0 ]; then
+#     echo "This script requires sudo privileges to change MAC address"
+#     echo "Usage: sudo mac-rotate [interface]"
+#     exit 1
+# fi
+
+# # Default to en0 (typical Wi-Fi interface), but allow override
+# INTERFACE="${1:-en0}"
+
+# # Check if interface exists
+# if ! ifconfig "$INTERFACE" &> /dev/null; then
+#     echo "Error: Interface $INTERFACE does not exist"
+#     echo "Available interfaces:"
+#     ifconfig -l
+#     exit 1
+# fi
+
+# # Get current MAC address
+# CURRENT_MAC=$(ifconfig "$INTERFACE" | awk '/ether/{print $2}')
+# echo "Current MAC address for $INTERFACE: $CURRENT_MAC"
+
+# # Generate a random MAC address
+# # First octet: use locally administered unicast address (second bit set to 1, first bit set to 0)
+# # This ensures it's a valid locally administered address
+# NEW_MAC=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | awk -F: '{printf "%02x:%s:%s:%s:%s:%s", or(strtonum("0x"$1), 2) - (and(strtonum("0x"$1), 1)), $2, $3, $4, $5, $6}')
+
+# echo "New MAC address: $NEW_MAC"
+
+# # Disassociate from any network
+# echo "Disassociating from network..."
+# /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
+
+# # Change the MAC address
+# echo "Changing MAC address..."
+# ifconfig "$INTERFACE" ether "$NEW_MAC"
+
+# # Verify the change
+# VERIFY_MAC=$(ifconfig "$INTERFACE" | awk '/ether/{print $2}')
+# echo "Verified MAC address: $VERIFY_MAC"
+
+# if [ "$VERIFY_MAC" = "$NEW_MAC" ]; then
+#     echo "✓ MAC address successfully changed"
+#     echo ""
+#     echo "Note: This change is temporary and will revert after reboot"
+#     echo "To restore original MAC address, run: sudo ifconfig $INTERFACE ether $CURRENT_MAC"
+# else
+#     echo "✗ Failed to change MAC address"
+#     exit 1
+# fi
