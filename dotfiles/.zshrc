@@ -105,3 +105,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Node Version Manager
 eval "$(fnm env --use-on-cd --shell zsh)"
+
+bindkey -v
+
+
+

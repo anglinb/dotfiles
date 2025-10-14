@@ -15,6 +15,7 @@ cask  "tableplus"
 cask  "paw"
 cask  "obsidian"
 cask  "notion-calendar"
+cask  "superhuman"
 mas 'Paste', id: 967_805_235
 mas 'Xcode', id: 497_799_835
 
