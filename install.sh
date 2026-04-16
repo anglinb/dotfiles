@@ -4,6 +4,11 @@ set -e
 
 cd "$(dirname "$0")"
 
+# Ask for sudo password upfront and keep the session alive
+# until the install finishes
+sudo -v
+while true; do sudo -n true; sleep 10; kill -0 "$$" || exit; done 2>/dev/null &
+
 PLATFORM="";
 if [ "$(uname)" == "Darwin" ]; then
     PLATFORM="osx"
@@ -36,5 +41,5 @@ fi
 cd dotfiles && ./install.sh
 cd ..
 
-# Finish setup
-vim +PluginInstall +qall
+# Install vim plugins
+vim +PlugInstall +qall

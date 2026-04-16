@@ -1,8 +1,5 @@
-tap "heroku/brew"
-tap "planetscale/tap"
 tap "cloudflare/cloudflare"
 tap "superfly/tap"
-tap "vectordotdev/brew"
 
 # Terminal
 brew "tmux"
@@ -11,7 +8,7 @@ brew "zsh"
 brew "reattach-to-user-namespace"
 brew "neovim"
 brew "wget"
-brew "vector"
+brew "mas"
 
 # Databases
 brew "postgresql@14"
@@ -27,17 +24,16 @@ brew "watchman"
 brew "pyenv-virtualenv"
 brew "go"
 brew "rust"
+brew "oven-sh/bun/bun"
 
-# ClI
-brew "terraform"
-brew "heroku"
+# CLI
 brew "flyctl"
 brew "gh"
-brew "pscale"
 brew "awscli"
 brew "aws-iam-authenticator"
 brew "gpg2"
 brew "cloudflared"
+brew "asc"
 
 # Kube
 cask "lens", args: { appdir: "/Applications" }
@@ -45,20 +41,18 @@ cask "lens", args: { appdir: "/Applications" }
 # Devtools
 cask "macvim", args: { appdir: "/Applications"}
 cask "docker", args: { appdir: "/Applications"}
-cask "graphiql", args: { appdir: "/Applications"}
 cask "raycast", args: { appdir: "/Applications" }
 cask "linear-linear", args: { appdir: "/Applications" }
 cask "cleanshot", args: { appdir: "/Applications" }
 cask "ngrok", args: { appdir: "/Applications" }
 cask "bruno", args: { appdir: "/Applications" }
 
-
 # Knowledge/Communications
 cask  "slack", args: { appdir: "/Applications"}
 cask  "notion", args: { appdir: "/Applications"}
 cask  "zoom", args: { appdir: "/Applications"}
 cask  "tableplus", args: { appdir: "/Applications"}
-cask  "paw", args: { appdir: "/Applications"}
+cask  "rapidapi", args: { appdir: "/Applications"}
 cask  "loom", args: { appdir: "/Applications"}
 cask  "obsidian", args: { appdir: "/Applications"}
 cask  "notion-calendar", args: { appdir: "/Applications"}
@@ -66,15 +60,15 @@ cask  "notion-calendar", args: { appdir: "/Applications"}
 # Misc
 cask "spotify", args: { appdir: "/Applications"}
 cask "google-chrome", args: { appdir: "/Applications"}
-# cask "istat-menus"
+cask "google-drive", args: { appdir: "/Applications"}
 cask "visual-studio-code", args: { appdir: "/Applications"}
 cask "cursor", args: { appdir: "/Applications"}
 cask "1password", args: { appdir: "/Applications"}
 cask "bambu-studio", args: { appdir: "/Applications"}
-
+cask "tailscale", args: { appdir: "/Applications"}
+cask "granola", args: { appdir: "/Applications"}
 
 # Mac app store
 mas 'Xcode', id: 497_799_835
 mas 'Paste', id: 967_805_235
 mas 'SimpleNote', id: 692_867_256
-mas 'iStat Menus', id: 1_319_778_037

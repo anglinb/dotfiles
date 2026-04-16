@@ -8,8 +8,6 @@ filetype off                  " required
 
 call plug#begin()
 
-" let Vundle manage Vundle, required
-Plug 'gmarik/Vundle.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'

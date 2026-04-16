@@ -17,13 +17,17 @@ brew services
 # Install from Brewfile
 brew bundle || true
 
-# TODO: If we can check if we need this, then we should
-# sudo xcodebuild -license accept
+# Accept Xcode license if not already accepted
+if ! xcodebuild -license check &> /dev/null; then
+	echo "Accepting Xcode license..."
+	sudo xcodebuild -license accept
+fi
 
 # Clean up all the garbage
 brew cleanup
 
 ./install_keyboard.sh
+./install_vimplug.sh
 
 # Install zsh
 which -s zsh 2>&1 > /dev/null
@@ -39,13 +43,29 @@ else
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# Install nvm
-if ! command -v nvm &> /dev/null
-then
-	echo "Installing nvm..."
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+# Uninstall nvm if present
+if [ -d "$HOME/.nvm" ]; then
+	echo "Removing nvm..."
+	rm -rf "$HOME/.nvm"
+fi
+
+# Install Volta
+if command -v volta &> /dev/null; then
+	echo "Volta is already installed."
 else
-	echo "nvm is already installed."
+	echo "Installing Volta..."
+	curl https://get.volta.sh | bash
+fi
+
+# Install Claude Code
+./install_claude.sh
+
+# Install Kanna
+if command -v kanna &> /dev/null; then
+	echo "Kanna is already installed."
+else
+	echo "Installing Kanna..."
+	bun install -g kanna-code
 fi
 
 # Make sure git will cache my password
