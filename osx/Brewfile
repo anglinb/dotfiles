@@ -1,5 +1,6 @@
 tap "cloudflare/cloudflare"
 tap "superfly/tap"
+tap "depot/tap"
 
 # Terminal
 brew "tmux"
@@ -34,13 +35,15 @@ brew "aws-iam-authenticator"
 brew "gpg2"
 brew "cloudflared"
 brew "asc"
+brew "depot/tap/depot"
+cask "1password-cli"
 
 # Kube
 cask "lens", args: { appdir: "/Applications" }
 
 # Devtools
-cask "macvim", args: { appdir: "/Applications"}
-cask "docker", args: { appdir: "/Applications"}
+cask "macvim-app", args: { appdir: "/Applications"}
+cask "docker-desktop", args: { appdir: "/Applications"}
 cask "raycast", args: { appdir: "/Applications" }
 cask "linear-linear", args: { appdir: "/Applications" }
 cask "cleanshot", args: { appdir: "/Applications" }
@@ -65,8 +68,9 @@ cask "visual-studio-code", args: { appdir: "/Applications"}
 cask "cursor", args: { appdir: "/Applications"}
 cask "1password", args: { appdir: "/Applications"}
 cask "bambu-studio", args: { appdir: "/Applications"}
-cask "tailscale", args: { appdir: "/Applications"}
+cask "tailscale-app", args: { appdir: "/Applications"}
 cask "granola", args: { appdir: "/Applications"}
+cask "superwhisper", args: { appdir: "/Applications"}
 
 # Mac app store
 mas 'Xcode', id: 497_799_835

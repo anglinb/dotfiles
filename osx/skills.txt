@@ -1,0 +1,9 @@
+# Claude Code skills to install globally.
+# Format: <repo> <skill1,skill2,...>
+# Lines starting with # are ignored.
+
+superwall/skills superwall,superwall-editor
+millionco/expect effect-best-practices,effect-portable-patterns,expect,code-review
+vercel-labs/agent-browser agent-browser
+rudrankriyam/app-store-connect-cli-skills asc-app-create-ui,asc-aso-audit,asc-build-lifecycle,asc-cli-usage,asc-crash-triage,asc-id-resolver,asc-localize-metadata,asc-metadata-sync,asc-notarization,asc-ppp-pricing,asc-release-flow,asc-revenuecat-catalog-sync,asc-screenshot-resize,asc-shots-pipeline,asc-signing-setup,asc-submission-health,asc-subscription-localization,asc-testflight-orchestration,asc-wall-submit,asc-whats-new-writer,asc-workflow,asc-xcode-build
+ParthJadhav/app-store-screenshots app-store-screenshots

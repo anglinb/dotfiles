@@ -28,6 +28,13 @@ fi
 mkdir -p ~/moonlight  2>&1 > /dev/null
 mkdir -p ~/superwall  2>&1 > /dev/null
 
+# Clone (or update) private dotfiles
+if [ -d private/.git ]; then
+	git -C private pull --ff-only
+else
+	gh repo clone anglinb/dotfiles-private private
+fi
+
 # Commands that I don't know where to put yet...
 # mkdir -p bin
 # git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

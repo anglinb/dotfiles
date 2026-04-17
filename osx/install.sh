@@ -60,6 +60,12 @@ fi
 # Install Claude Code
 ./install_claude.sh
 
+# Install Claude Code skills
+./install_skills.sh
+
+# Set up App Store Connect (asc) auth (from private repo)
+../private/install_asc.sh
+
 # Install Kanna
 if command -v kanna &> /dev/null; then
 	echo "Kanna is already installed."
