@@ -71,6 +71,7 @@ cask "bambu-studio", args: { appdir: "/Applications"}
 cask "tailscale-app", args: { appdir: "/Applications"}
 cask "granola", args: { appdir: "/Applications"}
 cask "superwhisper", args: { appdir: "/Applications"}
+cask "wifiman", args: { appdir: "/Applications"}
 
 # Mac app store
 mas 'Xcode', id: 497_799_835
