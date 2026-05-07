@@ -48,5 +48,19 @@ fi
 cd dotfiles && ./install.sh
 cd ..
 
+# Clone (or update) the personal skills repo and run its installer to
+# globally install all skills + extras listed in skills.txt.
+SKILLS_REPO_URL="https://github.com/anglinb/skills.git"
+SKILLS_REPO_DIR="$(pwd)/skills"
+if [ -d "${SKILLS_REPO_DIR}/.git" ]; then
+	echo "Updating ${SKILLS_REPO_URL}..."
+	git -C "${SKILLS_REPO_DIR}" fetch --tags --prune origin
+	git -C "${SKILLS_REPO_DIR}" reset --hard origin/HEAD 2>/dev/null || true
+else
+	echo "Cloning ${SKILLS_REPO_URL}..."
+	git clone "${SKILLS_REPO_URL}" "${SKILLS_REPO_DIR}"
+fi
+"${SKILLS_REPO_DIR}/install.sh"
+
 # Install vim plugins
 vim +PlugInstall +qall
